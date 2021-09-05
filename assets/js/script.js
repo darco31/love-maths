@@ -38,8 +38,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
         }
 
-
+/**
+ * Get the operands and the operator directly from the dom and
+ * returns a correct answer
+ */
         function calculateCorrectAnswer() {
+            let operand1 = parseInt(document.getElementById('operand1'),innerText);
+            let operand2 = parseInt(document.getElementById('operand2'),innerText);
+            let operator = document.getElementById('operator').innerText;
 
         }
 
