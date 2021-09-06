@@ -43,8 +43,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
             if (isCorrect) {
                 alert('Hey! You got it right:)')
+                incrementScore();
             } else {
                 alert(`Awwww..... you answered ${userAnswer}. The correct answer is ${calculatedAnswer[0]}!`);
+                incrementWrongAnswer();
             }
 
             runGame(calculatedAnswer[1]);
@@ -68,8 +70,20 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         }
 
-
+/**
+ * Gets the current score and increments it by 1
+ */
         function incrementScore() {
+
+            let oldScore = parseInt(document.getElementById('score').innerText);
+            document.getElementById('score').innerText = ++oldScore;
+
+        }
+
+        function incrementWrongAnswer() {
+
+            let oldScore = parseInt(document.getElementById('incorrect').innerText);
+            document.getElementById('incorrect').innerText = ++oldScore;
 
         }
 
